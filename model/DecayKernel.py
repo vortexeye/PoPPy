@@ -55,7 +55,7 @@ class BasicDecayKernel(object):
 
         dt2 = dt - delay
         # gt = w * np.exp(-w * dt2)
-        gt = w * torch.exp(-w * dt2)
+        gt = torch.exp(-w * dt2)
         gt[dt2 < 0] = 0
         # gt2 = np.zeros((dt.shape[0], dt.shape[1], 1))
         # gt2[:, :, 0] = gt
