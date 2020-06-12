@@ -55,7 +55,7 @@ class BasicDecayKernel(object):
 
         dt2 = dt - delay
         # gt = w * np.exp(-w * dt2)
-        gt = torch.exp(-w * dt2)
+        gt = torch.exp(-w * dt2) #AdityaCMT: Made Changes
         gt[dt2 < 0] = 0
         # gt2 = np.zeros((dt.shape[0], dt.shape[1], 1))
         # gt2[:, :, 0] = gt
@@ -88,7 +88,7 @@ class BasicDecayKernel(object):
         gt_stop = (-w * (t_stop - delay)).exp()
         gt_stop[gt_stop > 1] = 1
 
-        gt_d = gt_stop - gt_start
+        gt_d = (gt_stop - gt_start) / w #AdityaCMT: Made Changes
         # gt = np.zeros((gt_d.shape[0], gt_d.shape[1], 1))
         # gt[:, :, 0] = -gt_d
         gt = -gt_d.view(gt_d.size(0), gt_d.size(1), 1)
