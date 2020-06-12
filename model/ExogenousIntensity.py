@@ -109,12 +109,15 @@ class BasicExogenousIntensity(nn.Module):
         plt.stem(range(mu_all.shape[0]), mu_all, '-')
         plt.ylabel('Exogenous intensity')
         plt.xlabel('Index of event type')
-        if output_name is None:
-            plt.savefig('exogenous_intensity.png')
-        else:
-            plt.savefig(output_name)
-        plt.close("all")
-        logger.info("Done!")
+        plt.show()
+        
+        return plt
+#         if output_name is None:
+#             plt.savefig('exogenous_intensity.png')
+#         else:
+#             plt.savefig(output_name)
+#         plt.close("all")
+#         logger.info("Done!")
 
 
 
