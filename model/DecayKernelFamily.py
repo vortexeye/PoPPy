@@ -59,7 +59,7 @@ class RayleighKernel(BasicDecayKernel):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         sigma2 = self.parameters[0, 0]
@@ -116,7 +116,7 @@ class GaussianKernel(BasicDecayKernel):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         sigma2 = self.parameters[0, 0]
@@ -176,7 +176,7 @@ class PowerlawKernel(BasicDecayKernel):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         delay = self.parameters[0, 0]
@@ -257,7 +257,7 @@ class GateKernel(BasicDecayKernel):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         delay = self.parameters[0, 0]
@@ -322,7 +322,7 @@ class MultiGaussKernel(BasicDecayKernel):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         landmarks = self.parameters[0, :]
