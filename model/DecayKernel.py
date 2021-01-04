@@ -74,7 +74,7 @@ class BasicDecayKernel(object):
             t_start = 0 * t_stop
 
         if t_start.size() != t_stop.size():
-            logger.warning(f"The t_start does not have the same shape with t_stop, we set t_start to all zeros")
+            logger.warning("The t_start does not have the same shape with t_stop, we set t_start to all zeros")
             t_start = 0 * t_stop
 
         delay = self.parameters[0, 0]
